@@ -1,0 +1,104 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style10 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div >
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Crime Type Prediction Details  !!! </p>
+                            <hr>
+                            <div >
+                               <table border="5" bordercolor="#FF00FF">
+
+                            <td bgcolor="#FF0000"><span class="style8 style6">Gender</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Age</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Driving_License</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Region_Code</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Previously_Insured</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Vehicle_Age</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Vehicle_Damage</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Annual_Premium</span></td>
+                        <td bgcolor="#FF0000"><span class="style8 style6">Policy_Sales_Channel</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Vintage</span></td>
+                            <td bgcolor="#FF0000"><span class="style8 style6">Prediction</span></td>
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Gender}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Age}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Driving_License}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Region_Code}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Previously_Insured}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Vehicle_Age}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Vehicle_Damage}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Annual_Premium}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Policy_Sales_Channel}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Vintage}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.IPrediction}}</div></td>
+
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

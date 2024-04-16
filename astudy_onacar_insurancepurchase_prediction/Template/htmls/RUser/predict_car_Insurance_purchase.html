@@ -1,0 +1,163 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {color: #FF0000}
+.style8 {font-weight: bold}
+.style10 {color: #FFFF00}
+        .style11 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p align="center" class="text-uppercase pull-center style1">PREDICT CAR INSURANCE!!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="568" align="center">
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style11">Gender</div></td>
+                                    <td width="269"><select name="Gender">
+                                      <option>---Select Gender---</option>
+                                      <option>Male</option>
+                                      <option>Female</option>
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Age </div></td>
+                                    <td><input type="text" name="Age"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Driving_License</div></td>
+                                    <td><select name="Dl">
+                                      <option>---Driving_License---</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                     
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Region_Code</div></td>
+                                    <td><input type="text" name="Rc"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><strong><span class="style10">Previously_Insured</span></strong></div></td>
+                                    <td><select name="Pi">
+                                      <option>---Select Previously_Insured---</option>
+									  <option>0</option>
+                                      <option>1</option>
+                                      
+                                    </select>                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Vehicle_Age</div></td>
+                                    <td><select name="Vage">
+                                      <option>---Select Vehicle_Age---</option>
+                                      <option>> 2 Years</option>
+                                      <option>1-2 Year</option>
+									  <option>< 1 Year</option>
+									  <option>< 2 Years</option>
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11"><span class="style2">Vehicle_Damage</span></div></td>
+                                    <td><select name="Vd">
+                                        <option>---Select Vehicle_Damage---</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Enter Annual_Premium</div></td>
+                                    <td><input type="text" name="Ap"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style11">Policy_Sales_Channel</div></td>
+                                    <td><input type="text" name="Psc"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center"><span class="style11">Enter Vintage</span></div></td>
+                                    <td><input type="text" name="Vi"></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>
+            <input name="submit" type="submit" class="style1" value="Predict Car Insurance Type">
+        </p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" align="center" bordercolor="#FF00FF">
+
+                    <tr><td bgcolor="#FFFF00"><div align="center"><strong><span class="style8 style6"> CAR INSURANCE PREDICTION TYPE::</span></strong></div></td>
+
+                                             <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td>
+
+                        </tr>
+
+
+                      </table>
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
