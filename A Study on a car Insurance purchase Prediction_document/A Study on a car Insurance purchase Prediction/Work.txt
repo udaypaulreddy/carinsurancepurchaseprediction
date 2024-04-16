@@ -1,0 +1,36 @@
+Service Provider
+
+Login,
+Train and Test Data Sets, 
+View Trained and Tested Accuracy in Bar Chart, 
+View Trained and Tested Accuracy Results, 
+View Car Insurance Purchase Prediction, 
+Find Car Insurance Purchase Prediction Type Ratio, 
+Download Trained Data Sets, 
+View Car Insurance Purchase Prediction Type Ratio Results, 
+View All Remote Users.
+
+Remote User
+
+
+REGISTER AND LOGIN,
+POST DATA SETS, 
+PREDICT INSURANCE PURCHASE TYPE, 
+VIEW YOUR PROFILE.
+
+
+Members
+
+idno
+Gender
+Age
+Driving_License
+Region_Code
+Previously_Insured
+Vehicle_Age
+Vehicle_Damage
+Annual_Premium
+Policy_Sales_Channel
+Vintage
+IResponse
+IPrediction
